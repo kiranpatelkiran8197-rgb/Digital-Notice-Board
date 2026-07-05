@@ -556,3 +556,17 @@ function renderNoticesStream() {
         openNoticeDetails(notice.id);
       }
     });
+
+    D.noticesStreamList.appendChild(card);
+  });
+  
+  lucide.createIcons();
+}
+
+// --- Interaction Logics ---
+
+// 1. Switch Role (Student <-> Admin)
+function switchRole(role) {
+  state.currentRole = role;
+  
+  // Toggle Active styling on toggle group
