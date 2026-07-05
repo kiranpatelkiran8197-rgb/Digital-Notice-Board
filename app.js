@@ -699,3 +699,17 @@ function openNoticeDetails(noticeId) {
   }
   
   // Save active ID in modal data attribute
+  D.modalBackdrop.dataset.id = noticeId;
+  
+  // Set Category Tag details
+  D.modalCategoryBadge.textContent = notice.category;
+  D.modalCategoryBadge.className = `modal-category-tag ${notice.category}`;
+  
+  // Author information
+  const initials = notice.author.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+  D.modalAuthorAvatar.textContent = initials;
+  D.modalAuthorAvatar.className = `author-avatar-big ${notice.category === 'exam' ? 'admin-mode' : ''}`;
+  D.modalAuthorName.textContent = notice.author;
+  D.modalPostDate.textContent = new Date(notice.date).toLocaleString('en-US', {
+    month: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'
+  });

@@ -1257,3 +1257,29 @@ a {
   gap: 4px;
   font-size: 0.75rem;
   font-weight: 700;
+}
+
+.notice-pin-tag i {
+  width: 14px;
+  height: 14px;
+}
+
+/* Card Header Author info */
+.card-author-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-info-text h4 {
