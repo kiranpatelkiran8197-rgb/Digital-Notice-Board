@@ -914,3 +914,17 @@ function toggleCreateNoticeCollapse(shouldCollapse) {
     D.createNoticeForm.style.display = 'block';
     
     // Set default author name based on role
+    D.formNoticeAuthor.value = state.currentRole === 'admin' ? "Dean of Student Affairs" : "Office of Academics";
+  }
+}
+
+// --- Event Bindings Module ---
+function setupEventListeners() {
+  
+  // 1. Role Toggle Actions
+  D.roleStudent.addEventListener('click', () => switchRole('student'));
+  D.roleAdmin.addEventListener('click', () => switchRole('admin'));
+  
+  // 2. Click bell to show dropdown
+  D.notificationBell.addEventListener('click', (e) => {
+    e.stopPropagation();

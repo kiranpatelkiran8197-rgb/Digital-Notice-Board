@@ -1643,3 +1643,28 @@ a {
 
 .modal-attachment-card {
   border: 1px solid var(--border-color);
+  background-color: var(--bg-app);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.attachment-file-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-icon-doc {
+  width: 24px;
+  height: 24px;
+}
+
+.file-name {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
