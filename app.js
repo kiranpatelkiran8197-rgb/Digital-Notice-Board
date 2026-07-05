@@ -227,3 +227,17 @@ const D = {
 function renderMarkdown(text) {
   if (!text) return "";
   let html = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*(.*?)\*/g, "<em>$1</em>")
+    .replace(/`(.*?)`/g, "<code>$1</code>")
+    .replace(/\n/g, "<br>");
+  return html;
+}
+
+// Format ISO date string into readable text
+function formatFriendlyDate(isoString) {
+  const date = new Date(isoString);
+  const now = new Date();
