@@ -1900,3 +1900,28 @@ a {
   from {
     opacity: 0;
     transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-slow {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar-column {
+    order: 2; /* Move resources sidebar below feed in tablet/mobiles */
+  }
+  .stream-column {
+    order: 1;
+  }
+}

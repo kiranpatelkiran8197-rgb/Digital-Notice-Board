@@ -1057,3 +1057,17 @@ function setupEventListeners() {
   
   // Mock file options selection
   const mockFileBtns = document.querySelectorAll('.mock-file-option');
+  mockFileBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const filename = btn.dataset.filename;
+      const type = btn.dataset.type;
+      handleMockAttachmentSelection(filename, type);
+    });
+  });
+  
+  // Submit new notice form listener
+  D.createNoticeForm.addEventListener('submit', handleCreateNoticeSubmit);
+}
+
+// --- App Initialization ---
+function init() {
