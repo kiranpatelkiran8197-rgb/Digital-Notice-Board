@@ -100,3 +100,29 @@ a {
   background: #0f172a;
   color: #fff;
   display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  position: relative;
+}
+
+.ticker-label {
+  height: 100%;
+  padding: 0 16px;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.ticker-icon {
+  width: 16px;
+  height: 16px;
+  animation: pulse-slow 2s infinite;
+}

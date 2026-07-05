@@ -55,3 +55,17 @@ const DEFAULT_NOTICES = [
       {
         id: "c-2-1",
         author: "Meera Patel",
+        avatar: "MP",
+        content: "Can first-year students form a team, or do we need a senior member? We really want to join!",
+        date: "2026-07-04T16:00:00.000Z"
+      },
+      {
+        id: "c-2-2",
+        author: "ACM Support (Admin)",
+        avatar: "AS",
+        content: "Teams can be 100% first-years! There are special prizes specifically for freshman teams. Register away!",
+        date: "2026-07-04T17:12:00.000Z"
+      }
+    ]
+  },
+  {
