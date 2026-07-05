@@ -141,3 +141,17 @@ const D = {
   createNoticeForm: document.getElementById('create-notice-form'),
   cancelCreateNotice: document.getElementById('cancel-create-notice'),
   btnCancelNotice: document.getElementById('btn-cancel-notice'),
+  
+  // Notice Form Fields
+  formNoticeTitle: document.getElementById('notice-title'),
+  formNoticeCategory: document.getElementById('notice-category'),
+  formNoticeAuthor: document.getElementById('notice-author'),
+  formNoticeContent: document.getElementById('notice-content'),
+  formNoticeIsPinned: document.getElementById('notice-is-pinned'),
+  formNoticeIsUrgent: document.getElementById('notice-is-urgent'),
+  btnAttachMock: document.getElementById('btn-attach-mock'),
+  mockFilesDrawer: document.getElementById('mock-files-drawer'),
+  attachedFileDisplay: document.getElementById('attached-file-display'),
+  attachedFileName: document.getElementById('attached-file-name'),
+  
+  // Search & Sorting
