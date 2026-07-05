@@ -717,3 +717,29 @@ a {
 .cat-badge {
   background-color: var(--bg-app);
   color: var(--text-secondary);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.cat-filter-btn.active .cat-badge {
+  background-color: #fff;
+}
+
+.star-icon-color {
+  color: var(--starred-color);
+  fill: var(--starred-color);
+}
+
+/* Quick links styling */
+.quick-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quick-link-item {
+  display: flex;
+  align-items: center;

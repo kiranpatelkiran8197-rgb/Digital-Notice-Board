@@ -398,3 +398,18 @@ function renderNotifications() {
     D.notificationList.appendChild(item);
   });
 }
+
+// 4. Render Notice Cards Stream Feed
+function renderNoticesStream() {
+  D.noticesStreamList.innerHTML = "";
+  
+  // Filtering
+  let filtered = state.notices;
+  
+  // Filter by category
+  if (state.activeCategory !== 'all' && state.activeCategory !== 'starred') {
+    filtered = filtered.filter(n => n.category === state.activeCategory);
+  } else if (state.activeCategory === 'starred') {
+    filtered = filtered.filter(n => state.starredNotices.includes(n.id));
+  }
+  
