@@ -126,3 +126,29 @@ a {
   height: 16px;
   animation: pulse-slow 2s infinite;
 }
+
+.ticker-content {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ticker-items {
+  display: flex;
+  white-space: nowrap;
+  padding-left: 20px;
+  animation: ticker-scrolling 35s linear infinite;
+  gap: 60px;
+}
+
+.ticker-items:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;

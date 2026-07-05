@@ -69,3 +69,17 @@ const DEFAULT_NOTICES = [
     ]
   },
   {
+    id: "notice-3",
+    title: "Google Campus Recruitment Drive - Software Engineer Roles (2027 Graduating Batch)",
+    category: "placement",
+    content: "The Placement & Careers Cell is excited to announce the upcoming Google Campus Recruitment Drive. Google is hiring for Software Engineering (SWE) roles. \n\n**Eligibility Criteria:**\n* Degree: B.Tech / M.Tech in CSE, IT, ECE or related engineering disciplines\n* Minimum CGPA: **7.5** with no active backlogs\n* Batch: Graduating in Summer 2027\n\n**Application Workflow:**\n1. Review the attached job description and eligibility details.\n2. Submit your updated resume on the Placement Portal by **July 30, 2026, 05:00 PM**.\n3. Keep your DSA, System Design, and basic Networking principles brushed up for the initial coding rounds.\n\nLate submissions will strictly not be entertained.",
+    author: "Placement Cell Coordinator",
+    date: "2026-07-03T09:00:00.000Z",
+    isPinned: false,
+    isUrgent: false,
+    attachment: {
+      name: "job_roles_excel.xlsx",
+      type: "excel",
+      size: "450 KB"
+    },
+    likes: 120,
