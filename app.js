@@ -742,3 +742,17 @@ function openNoticeDetails(noticeId) {
   }
   
   // Comments List rendering
+  renderCommentsList(notice.comments);
+  
+  // Show modal window
+  D.modalBackdrop.style.display = 'flex';
+  lucide.createIcons();
+}
+
+function updateModalStarButton(starred) {
+  if (starred) {
+    D.modalStarBtn.classList.add('starred');
+    D.modalStarBtn.title = "Remove from bookmarks";
+  } else {
+    D.modalStarBtn.classList.remove('starred');
+    D.modalStarBtn.title = "Bookmark notice";

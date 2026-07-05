@@ -1334,3 +1334,29 @@ a {
   color: var(--text-primary);
   margin-bottom: 6px;
   letter-spacing: -0.02em;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  /* Truncation fallback */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Attachment Display inside Card */
+.card-attachment-clip {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+}
+
+.card-attachment-clip i {
+  width: 18px;
