@@ -26,3 +26,17 @@ const DEFAULT_NOTICES = [
         avatar: "AR",
         content: "Are we allowed to bring scientific calculators for the Discrete Mathematics exam?",
         date: "2026-07-05T11:15:00.000Z"
+      },
+      {
+        id: "c-1-2",
+        author: "Prof. Sarah Jenkins (Admin)",
+        avatar: "SJ",
+        content: "Yes, non-programmable scientific calculators are permitted for MATH-302. Please ensure they have no written text on the cases.",
+        date: "2026-07-05T11:45:00.000Z"
+      }
+    ]
+  },
+  {
+    id: "notice-2",
+    title: "Annual Hackathon 'AetherHack 2026' Registrations Open!",
+    category: "event",
