@@ -40,3 +40,18 @@ const DEFAULT_NOTICES = [
     id: "notice-2",
     title: "Annual Hackathon 'AetherHack 2026' Registrations Open!",
     category: "event",
+    content: "Get ready to innovate, code, and win! The department of Computer Science presents the annual 36-hour hackathon: **AetherHack 2026**.\n\n**Themes:** Smart Cities, AI-Driven Education, Sustainability Tech, and Open Innovation.\n\n**Prizes & Perks:**\n* Cash prize pool of **$5,000**\n* Internship opportunities at leading tech companies\n* Free custom event hoodies, merchandise, and meals!\n\n**Rules:** Teams must consist of 2 to 4 students. Open to all branches and years. Register using the portal before the deadline: **October 15, 2026**.\n\nRefer to the attached guidelines document for eligibility, grading rubric, and schedule.",
+    author: "ACM Student Chapter",
+    date: "2026-07-04T14:30:00.000Z",
+    isPinned: false,
+    isUrgent: true,
+    attachment: {
+      name: "hackathon_guidelines.docx",
+      type: "word",
+      size: "840 KB"
+    },
+    likes: 89,
+    comments: [
+      {
+        id: "c-2-1",
+        author: "Meera Patel",
