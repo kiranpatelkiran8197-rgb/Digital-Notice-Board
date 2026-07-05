@@ -842,3 +842,16 @@ function handleMockAttachmentSelection(filename, type) {
   D.attachedFileDisplay.style.color = 'var(--text-primary)';
   D.attachedFileDisplay.style.borderColor = 'var(--text-muted)';
   
+  // Hide drawer select list
+  D.mockFilesDrawer.style.display = 'none';
+  lucide.createIcons();
+}
+
+function clearFormAttachment() {
+  state.selectedFile = null;
+  D.attachedFileName.textContent = "No file attached";
+  const icon = D.attachedFileDisplay.querySelector('.file-icon');
+  icon.setAttribute('data-lucide', 'paperclip');
+  D.attachedFileDisplay.removeAttribute('style');
+  lucide.createIcons();
+}
