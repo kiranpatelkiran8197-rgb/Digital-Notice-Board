@@ -1043,3 +1043,17 @@ function setupEventListeners() {
       submitComment();
     }
   });
+  
+  // 7. Create Notice Collapsed Box Toggle
+  D.createNoticeCollapsed.addEventListener('click', () => toggleCreateNoticeCollapse(false));
+  D.cancelCreateNotice.addEventListener('click', () => toggleCreateNoticeCollapse(true));
+  D.btnCancelNotice.addEventListener('click', () => toggleCreateNoticeCollapse(true));
+  
+  // File Attachment Drawer Logic
+  D.btnAttachMock.addEventListener('click', (e) => {
+    e.stopPropagation();
+    D.mockFilesDrawer.style.display = D.mockFilesDrawer.style.display === 'none' ? 'block' : 'none';
+  });
+  
+  // Mock file options selection
+  const mockFileBtns = document.querySelectorAll('.mock-file-option');
