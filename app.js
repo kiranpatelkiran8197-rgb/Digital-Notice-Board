@@ -499,3 +499,17 @@ function renderNoticesStream() {
           ` : ''}
           <button class="card-top-btn ${isStarred ? 'starred' : ''}" title="Star Notice" data-action="star">
             <i data-lucide="star"></i>
+          </button>
+          ${deleteBtnHtml}
+        </div>
+      </div>
+
+      <!-- Main card content click area -->
+      <div class="card-content" data-action="open">
+        <div class="card-tags">
+          <span class="notice-badge ${notice.category}">${notice.category}</span>
+          ${isUrgent ? `<span class="notice-badge exam">Urgent</span>` : ''}
+        </div>
+        <h3>${notice.title}</h3>
+        <p>${notice.content}</p>
+      </div>

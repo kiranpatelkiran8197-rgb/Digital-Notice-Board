@@ -897,3 +897,29 @@ a {
 
 /* Attachment Sim Card selector */
 .attachment-sim-group {
+  position: relative;
+}
+
+.attachment-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-app);
+  padding: 6px;
+  justify-content: space-between;
+}
+
+.file-name-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding-left: 8px;
+}
+
+.file-icon {
+  width: 16px;
+  height: 16px;
