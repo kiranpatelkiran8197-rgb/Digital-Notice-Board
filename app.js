@@ -799,3 +799,18 @@ function renderCommentsList(comments) {
 // 7. Add comments thread action
 function submitComment() {
   const text = D.commentTextarea.value.trim();
+  if (text === '') return;
+  
+  const noticeId = D.modalBackdrop.dataset.id;
+  const notice = state.notices.find(n => n.id === noticeId);
+  if (!notice) return;
+  
+  // Author name mapping
+  const authorName = state.currentRole === 'admin' ? "Faculty Coordinator (Admin)" : "Demo Student";
+  const avatarInitials = state.currentRole === 'admin' ? "FC" : "DS";
+  
+  const newComment = {
+    id: `c-added-${Date.now()}`,
+    author: authorName,
+    avatar: avatarInitials,
+    content: text,
