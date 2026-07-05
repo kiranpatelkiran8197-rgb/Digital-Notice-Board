@@ -255,3 +255,18 @@ function formatFriendlyDate(isoString) {
   }
   
   // Options for full date formatting
+  const options = { month: 'short', day: 'numeric', year: 'numeric' };
+  return date.toLocaleDateString('en-US', options);
+}
+
+// Show popup toast message
+function showToast(message, type = 'info') {
+  D.toastMessage.textContent = message;
+  const icon = D.toastNotification.querySelector('.toast-icon');
+  
+  if (type === 'success') {
+    icon.setAttribute('data-lucide', 'check-circle');
+    D.toastNotification.style.borderLeft = "4px solid var(--placement-color)";
+  } else if (type === 'error') {
+    icon.setAttribute('data-lucide', 'x-circle');
+    D.toastNotification.style.borderLeft = "4px solid var(--exam-color)";
