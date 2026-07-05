@@ -1668,3 +1668,29 @@ a {
   font-weight: 700;
   color: var(--text-primary);
 }
+
+.file-size {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.download-attachment-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-round);
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.download-attachment-btn:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}

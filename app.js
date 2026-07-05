@@ -928,3 +928,17 @@ function setupEventListeners() {
   // 2. Click bell to show dropdown
   D.notificationBell.addEventListener('click', (e) => {
     e.stopPropagation();
+    D.notificationDropdown.classList.toggle('active');
+  });
+  
+  // Mark all reads action
+  D.markAllRead.addEventListener('click', (e) => {
+    e.stopPropagation();
+    state.readNotices = state.notices.map(n => n.id);
+    saveStateToStorage();
+    renderNotifications();
+  });
+  
+  // Close dropdown on click outside
+  document.addEventListener('click', () => {
+    D.notificationDropdown.classList.remove('active');
