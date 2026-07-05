@@ -692,3 +692,28 @@ a {
   transition: all var(--transition-fast);
   text-align: left;
 }
+
+.cat-filter-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.cat-filter-btn.active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.cat-filter-btn.active.starred-btn {
+  background-color: var(--starred-bg);
+  color: var(--starred-color);
+}
+
+.cat-filter-btn div, .cat-filter-btn span:not(.cat-badge) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cat-badge {
+  background-color: var(--bg-app);
+  color: var(--text-secondary);

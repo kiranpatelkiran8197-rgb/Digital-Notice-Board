@@ -384,3 +384,17 @@ function renderNotifications() {
         <span class="item-title">${notice.title}</span>
         <span class="item-time">${formatFriendlyDate(notice.date)}</span>
       </div>
+    `;
+    item.addEventListener('click', () => {
+      // Mark as read
+      if (isUnread) {
+        state.readNotices.push(notice.id);
+        saveStateToStorage();
+        renderNotifications();
+      }
+      D.notificationDropdown.classList.remove('active');
+      openNoticeDetails(notice.id);
+    });
+    D.notificationList.appendChild(item);
+  });
+}
