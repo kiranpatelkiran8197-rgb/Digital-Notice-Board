@@ -985,3 +985,18 @@ function setupEventListeners() {
     D.clearSearch.style.display = 'none';
     D.searchStatusBanner.style.display = 'none';
     renderNoticesStream();
+  });
+  
+  // Banner clear button action
+  D.resetSearchBannerBtn.addEventListener('click', () => {
+    D.searchInput.value = "";
+    state.searchQuery = "";
+    D.clearSearch.style.display = 'none';
+    D.searchStatusBanner.style.display = 'none';
+    renderNoticesStream();
+  });
+  
+  // 5. Sorting Controls
+  D.sortRecent.addEventListener('click', () => {
+    D.sortRecent.classList.add('active');
+    D.sortPinned.classList.remove('active');
