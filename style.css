@@ -949,3 +949,29 @@ a {
   background-color: var(--bg-hover);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
+  margin-top: 8px;
+  padding: 12px;
+  animation: slide-down-fade 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.mock-files-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.mock-file-option {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;

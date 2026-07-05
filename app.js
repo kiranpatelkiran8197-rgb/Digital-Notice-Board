@@ -527,3 +527,18 @@ function renderNoticesStream() {
           <div class="stat-item" data-action="open">
             <i data-lucide="message-square"></i>
             <span>${notice.comments.length} Class Comments</span>
+          </div>
+        </div>
+        <div class="stat-item" data-action="open" style="color: var(--color-primary);">
+          <span>Read announcement →</span>
+        </div>
+      </div>
+    `;
+    
+    // Add Click listener delegation on the notice card
+    card.addEventListener('click', (e) => {
+      const target = e.target.closest('button') || e.target.closest('.stat-item') || e.target.closest('.card-attachment-clip') || e.target.closest('.card-content');
+      if (!target) return;
+      
+      const action = target.dataset.action || target.getAttribute('data-action');
+      
