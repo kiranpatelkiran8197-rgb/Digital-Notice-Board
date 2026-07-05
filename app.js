@@ -456,3 +456,17 @@ function renderNoticesStream() {
     
     card.className = `notice-card ${isPinned ? 'pinned' : ''} ${isUrgent ? 'urgent-card' : ''}`;
     card.dataset.id = notice.id;
+    
+    // Generate inner html
+    let attachmentHtml = "";
+    if (notice.attachment) {
+      attachmentHtml = `
+        <div class="card-attachment-clip ${notice.attachment.type}">
+          <i data-lucide="paperclip"></i>
+          <span>${notice.attachment.name}</span>
+        </div>
+      `;
+    }
+    
+    // Author Initials for Avatar
+    const initials = notice.author.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
