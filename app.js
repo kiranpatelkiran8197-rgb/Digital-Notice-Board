@@ -656,3 +656,17 @@ function toggleLikeNotice(noticeId) {
     notice.likes -= 1;
   }
   
+  saveStateToStorage();
+  renderNoticesStream();
+}
+
+// 4. Delete notice
+function deleteNotice(noticeId) {
+  if (!confirm("Are you sure you want to delete this notice? This action cannot be undone.")) return;
+  
+  // Filter notices
+  state.notices = state.notices.filter(n => n.id !== noticeId);
+  
+  // Filter starred/read lists
+  state.starredNotices = state.starredNotices.filter(id => id !== noticeId);
+  state.readNotices = state.readNotices.filter(id => id !== noticeId);

@@ -1180,3 +1180,29 @@ a {
 }
 
 .search-status-banner button {
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.search-status-banner button:hover {
+  text-decoration: underline;
+}
+
+/* Stream notice cards */
+.notices-stream-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notice-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  cursor: pointer;
