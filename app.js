@@ -584,3 +584,18 @@ function switchRole(role) {
     
     // Show creation block
     D.adminCreateNoticeContainer.style.display = 'block';
+    
+    // Comment input avatar initials update
+    D.commentInputAvatar.textContent = "AD";
+    D.commentInputAvatar.style.backgroundColor = "var(--color-accent-light)";
+    D.commentInputAvatar.style.borderColor = "var(--color-accent)";
+    
+    showToast("Switched to Administrator View", "info");
+  } else {
+    D.roleStudent.classList.add('active');
+    D.roleAdmin.classList.remove('active');
+    
+    // Update profile details
+    D.userAvatarInitials.textContent = "ST";
+    D.userAvatarProfile.classList.remove('admin-mode');
+    
