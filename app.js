@@ -298,3 +298,17 @@ function loadStateFromStorage() {
   const savedLiked = localStorage.getItem('aether_liked');
   const savedRead = localStorage.getItem('aether_read');
   const savedRole = localStorage.getItem('aether_role');
+
+  state.notices = savedNotices ? JSON.parse(savedNotices) : DEFAULT_NOTICES;
+  state.starredNotices = savedStarred ? JSON.parse(savedStarred) : [];
+  state.likedNotices = savedLiked ? JSON.parse(savedLiked) : [];
+  state.readNotices = savedRead ? JSON.parse(savedRead) : ["notice-1", "notice-2", "notice-3", "notice-4"]; // Prepopulate read list for mock data
+  state.currentRole = savedRole ? savedRole : 'student';
+}
+
+// --- Dynamic Rendering Modules ---
+
+// 1. Render Ticker
+function renderTicker() {
+  D.tickerItems.innerHTML = "";
+  const urgentNotices = state.notices.filter(n => n.isUrgent);

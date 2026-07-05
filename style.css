@@ -537,3 +537,29 @@ a {
 .user-avatar-circle.mini {
   width: 32px;
   height: 32px;
+  font-size: 0.75rem;
+}
+
+/* 4. Classroom Hero Card Banner */
+.app-workspace {
+  max-width: var(--max-width);
+  margin: 24px auto 0;
+  padding: 0 24px;
+}
+
+.classroom-hero {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 35%, #0d9488 100%);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 24px;
+}
+
+.classroom-hero.admin-theme {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 40%, #7c3aed 100%);
+}
+
+.hero-content {
