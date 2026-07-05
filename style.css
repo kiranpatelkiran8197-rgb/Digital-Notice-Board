@@ -872,3 +872,28 @@ a {
 .form-group input[type="text"], 
 .form-group select, 
 .form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+  background-color: var(--bg-app);
+}
+
+.form-group input[type="text"]:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  background-color: #fff;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Attachment Sim Card selector */
+.attachment-sim-group {

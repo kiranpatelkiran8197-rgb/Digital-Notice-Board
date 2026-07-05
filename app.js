@@ -484,3 +484,18 @@ function renderNoticesStream() {
         <div class="author-details">
           <div class="user-avatar-circle mini ${notice.category === 'exam' ? 'admin-mode' : ''}">
             <span>${initials}</span>
+          </div>
+          <div class="author-info-text">
+            <h4>${notice.author}</h4>
+            <span class="post-time-stamp">${formatFriendlyDate(notice.date)}</span>
+          </div>
+        </div>
+        <div class="card-actions-top">
+          ${isPinned ? `
+            <div class="notice-pin-tag">
+              <i data-lucide="pin"></i>
+              <span>Pinned</span>
+            </div>
+          ` : ''}
+          <button class="card-top-btn ${isStarred ? 'starred' : ''}" title="Star Notice" data-action="star">
+            <i data-lucide="star"></i>
