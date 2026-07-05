@@ -83,3 +83,18 @@ const DEFAULT_NOTICES = [
       size: "450 KB"
     },
     likes: 120,
+    comments: []
+  },
+  {
+    id: "notice-4",
+    title: "Extended Library Timings for Mid-Sem Prep Week",
+    category: "general",
+    content: "To support students preparing for the upcoming Mid-Semester Examinations, the Central Library will observe extended operational hours.\n\nStarting from **Monday, October 12, 2026**, the library will be open **24/7** for reading room access.\n\n* **Borrowing services:** 08:00 AM to 08:00 PM only.\n* **Reading Room access:** 24 Hours (Requires biometric access/valid Student ID after 09:00 PM).\n* **Rules:** Silent study protocol will be strictly enforced. Food is not allowed inside, but bottled water is permitted. Security staff will conduct regular rounds.",
+    author: "Chief Librarian",
+    date: "2026-07-02T11:20:00.000Z",
+    isPinned: false,
+    isUrgent: false,
+    likes: 56,
+    comments: [
+      {
+        id: "c-4-1",

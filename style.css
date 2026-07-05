@@ -152,3 +152,27 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.ticker-item:hover {
+  color: var(--color-accent-light);
+}
+
+.ticker-tag {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.ticker-tag.exam { background: var(--exam-color); color: #fff; }
+.ticker-tag.event { background: var(--event-color); color: #fff; }
+.ticker-tag.placement { background: var(--placement-color); color: #fff; }
+.ticker-tag.general { background: var(--general-color); color: #fff; }
+
+@keyframes ticker-scrolling {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
