@@ -212,3 +212,18 @@ const D = {
   // Bell Notifications
   notificationBell: document.getElementById('notification-bell'),
   bellBadgeCount: document.getElementById('bell-badge-count'),
+  notificationDropdown: document.getElementById('notification-dropdown'),
+  notificationList: document.getElementById('notification-list'),
+  markAllRead: document.getElementById('mark-all-read'),
+  
+  // Toast
+  toastNotification: document.getElementById('toast-notification'),
+  toastMessage: document.getElementById('toast-message')
+};
+
+// --- Helper Functions ---
+
+// Simple markdown formatter
+function renderMarkdown(text) {
+  if (!text) return "";
+  let html = text
