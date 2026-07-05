@@ -184,3 +184,17 @@ const D = {
   
   // Ticker
   tickerItems: document.getElementById('ticker-items'),
+  
+  // Modal Detailed View
+  modalBackdrop: document.getElementById('notice-modal-backdrop'),
+  closeNoticeModal: document.getElementById('close-notice-modal'),
+  modalCategoryBadge: document.getElementById('modal-category-badge'),
+  modalAuthorAvatar: document.getElementById('modal-author-avatar'),
+  modalAuthorName: document.getElementById('modal-author-name'),
+  modalPostDate: document.getElementById('modal-post-date'),
+  modalStarBtn: document.getElementById('modal-star-btn'),
+  modalDeleteBtn: document.getElementById('modal-delete-btn'),
+  modalNoticeTitle: document.getElementById('modal-notice-title'),
+  modalNoticeBody: document.getElementById('modal-notice-body'),
+  modalAttachmentsContainer: document.getElementById('modal-attachments-container'),
+  modalFileName: document.getElementById('modal-file-name'),
