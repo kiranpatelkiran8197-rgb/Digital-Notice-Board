@@ -1206,3 +1206,29 @@ a {
   box-shadow: var(--shadow-sm);
   position: relative;
   cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Hover effects */
+.notice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--text-muted);
+}
+
+/* Pin indicator */
+.notice-card.pinned {
+  border-left: 5px solid var(--color-accent);
+}
+
+.notice-card.urgent-card {
+  border-left: 5px solid var(--exam-color);
+}
+
+/* Card Badge Tag list */
+.card-tags {
+  display: flex;
+  align-items: center;

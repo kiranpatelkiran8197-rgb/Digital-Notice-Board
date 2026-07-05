@@ -670,3 +670,18 @@ function deleteNotice(noticeId) {
   // Filter starred/read lists
   state.starredNotices = state.starredNotices.filter(id => id !== noticeId);
   state.readNotices = state.readNotices.filter(id => id !== noticeId);
+  state.likedNotices = state.likedNotices.filter(id => id !== noticeId);
+  
+  saveStateToStorage();
+  updateStatsAndBadges();
+  renderTicker();
+  renderNotifications();
+  renderNoticesStream();
+  
+  // Close details modal if the deleted notice was open
+  if (D.modalBackdrop.style.display === 'flex' && D.modalBackdrop.dataset.id === noticeId) {
+    closeDetailsModal();
+  }
+  
+  showToast("Notice deleted successfully", "success");
+}
