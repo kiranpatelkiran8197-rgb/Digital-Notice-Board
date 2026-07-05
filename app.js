@@ -1071,3 +1071,18 @@ function setupEventListeners() {
 
 // --- App Initialization ---
 function init() {
+  loadStateFromStorage();
+  setupEventListeners();
+  
+  // Apply loaded states to UI
+  switchRole(state.currentRole);
+  
+  // Initial renders
+  renderTicker();
+  updateStatsAndBadges();
+  renderNotifications();
+  renderNoticesStream();
+}
+
+// Start application
+document.addEventListener('DOMContentLoaded', init);

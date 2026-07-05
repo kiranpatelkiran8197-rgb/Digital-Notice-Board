@@ -1925,3 +1925,30 @@ a {
     order: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .main-header {
+    padding: 10px 0;
+  }
+  .header-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .search-area {
+    order: 4;
+    width: 100%;
+    max-width: 100%;
+  }
+  .classroom-hero {
+    padding: 24px;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .mock-files-grid {
+    grid-template-columns: 1fr;
+  }
+}
