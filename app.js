@@ -312,3 +312,18 @@ function loadStateFromStorage() {
 function renderTicker() {
   D.tickerItems.innerHTML = "";
   const urgentNotices = state.notices.filter(n => n.isUrgent);
+  
+  if (urgentNotices.length === 0) {
+    D.tickerItems.innerHTML = `<div class="ticker-item"><span>No urgent notifications at this time. Have a productive week!</span></div>`;
+    return;
+  }
+  
+  // Clone array to double items for infinite scrolling visual stability
+  const scrollItems = [...urgentNotices, ...urgentNotices];
+  
+  scrollItems.forEach((notice, index) => {
+    const item = document.createElement('div');
+    item.className = 'ticker-item';
+    item.dataset.id = notice.id;
+    item.innerHTML = `
+      <span class="ticker-tag ${notice.category}">${notice.category}</span>
