@@ -98,3 +98,17 @@ const DEFAULT_NOTICES = [
     comments: [
       {
         id: "c-4-1",
+        author: "Devon Lee",
+        avatar: "DL",
+        content: "Awesome initiative! Will the campus canteen also stay open late?",
+        date: "2026-07-02T12:00:00.000Z"
+      },
+      {
+        id: "c-4-2",
+        author: "Chief Librarian",
+        avatar: "CL",
+        content: "Yes, the main cafeteria near Block B will remain open until 02:00 AM during this prep week.",
+        date: "2026-07-02T14:30:00.000Z"
+      }
+    ]
+  }
