@@ -785,3 +785,17 @@ function renderCommentsList(comments) {
         <div class="comment-info-header">
           <span class="commenter-name">${comment.author}</span>
           <span class="comment-time">${formatFriendlyDate(comment.date)}</span>
+        </div>
+        <p class="comment-body-text">${comment.content}</p>
+      </div>
+    `;
+    D.modalCommentsList.appendChild(node);
+  });
+  
+  // Auto-scroll comments thread to bottom
+  D.modalCommentsList.scrollTop = D.modalCommentsList.scrollHeight;
+}
+
+// 7. Add comments thread action
+function submitComment() {
+  const text = D.commentTextarea.value.trim();

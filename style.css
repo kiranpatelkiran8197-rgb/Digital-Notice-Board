@@ -1412,3 +1412,28 @@ a {
 .stat-item.active {
   color: var(--exam-color);
 }
+
+.stat-item.active i {
+  fill: var(--exam-color);
+}
+
+.stat-item i {
+  width: 16px;
+  height: 16px;
+}
+
+/* Empty stream placeholder card */
+.empty-feed-placeholder {
+  background-color: var(--bg-card);
+  border: 1px dashed var(--text-muted);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  text-align: center;
+}
+
+.empty-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-round);
+  background-color: var(--bg-app);
+  display: flex;
