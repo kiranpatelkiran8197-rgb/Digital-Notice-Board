@@ -542,3 +542,17 @@ function renderNoticesStream() {
       
       const action = target.dataset.action || target.getAttribute('data-action');
       
+      if (action === 'star') {
+        e.stopPropagation();
+        toggleStarNotice(notice.id);
+      } else if (action === 'delete') {
+        e.stopPropagation();
+        deleteNotice(notice.id);
+      } else if (action === 'like') {
+        e.stopPropagation();
+        toggleLikeNotice(notice.id);
+      } else {
+        // Open card details
+        openNoticeDetails(notice.id);
+      }
+    });

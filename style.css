@@ -975,3 +975,28 @@ a {
   text-align: left;
   display: flex;
   align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.mock-file-option:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.mock-file-option i {
+  width: 16px;
+  height: 16px;
+}
+
+.mock-file-option i.pdf { color: var(--exam-color); }
+.mock-file-option i.word { color: var(--color-primary); }
+.mock-file-option i.excel { color: var(--placement-color); }
+.mock-file-option i.image { color: var(--event-color); }
+
+/* Checkboxes row */
+.form-row-checkboxes {
+  display: flex;
