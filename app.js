@@ -957,3 +957,17 @@ function setupEventListeners() {
       const textSpan = btn.querySelector('span');
       D.currentFilterTitle.textContent = textSpan ? textSpan.textContent : "All Notices";
       
+      renderNoticesStream();
+    });
+  });
+  
+  // 4. Searching Input logic
+  D.searchInput.addEventListener('input', () => {
+    const val = D.searchInput.value;
+    state.searchQuery = val;
+    
+    if (val.trim().length > 0) {
+      D.clearSearch.style.display = 'flex';
+      D.searchStatusBanner.style.display = 'flex';
+      D.searchQueryText.textContent = val;
+    } else {

@@ -1720,3 +1720,29 @@ a {
 .comments-header i {
   width: 18px;
   height: 18px;
+  color: var(--text-muted);
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.comment-node {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.comment-node:hover {
+  background-color: var(--bg-hover);
+}
+
+.comment-info-box {
