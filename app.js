@@ -1000,3 +1000,17 @@ function setupEventListeners() {
   D.sortRecent.addEventListener('click', () => {
     D.sortRecent.classList.add('active');
     D.sortPinned.classList.remove('active');
+    state.sortBy = 'recent';
+    renderNoticesStream();
+  });
+  
+  D.sortPinned.addEventListener('click', () => {
+    D.sortPinned.classList.add('active');
+    D.sortRecent.classList.remove('active');
+    state.sortBy = 'pinned';
+    renderNoticesStream();
+  });
+  
+  // 6. Modal Close Trigger
+  D.closeNoticeModal.addEventListener('click', closeDetailsModal);
+  D.modalBackdrop.addEventListener('click', (e) => {

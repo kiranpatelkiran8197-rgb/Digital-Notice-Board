@@ -1797,3 +1797,29 @@ a {
   border-color: var(--border-focus);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
+
+.comment-input-wrapper textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  resize: none;
+  height: 52px;
+}
+
+.comment-input-wrapper textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.comment-send-btn {
+  background-color: var(--color-primary);
+  color: #fff;
+  align-self: flex-end;
+  margin: 6px;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-round);
+  display: flex;
+  align-items: center;
