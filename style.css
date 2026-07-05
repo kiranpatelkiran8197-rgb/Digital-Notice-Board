@@ -1566,3 +1566,29 @@ a {
 
 .metadata-text h4 {
   font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.metadata-text span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.modal-notice-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.modal-action-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}

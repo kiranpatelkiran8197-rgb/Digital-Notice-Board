@@ -871,3 +871,17 @@ function handleCreateNoticeSubmit(e) {
     showToast("Please fill in all required fields", "error");
     return;
   }
+  
+  // Construct notice object
+  const newNotice = {
+    id: `notice-added-${Date.now()}`,
+    title: title,
+    category: category,
+    content: content,
+    author: authorName,
+    date: new Date().toISOString(),
+    isPinned: isPinned,
+    isUrgent: isUrgent,
+    attachment: state.selectedFile,
+    likes: 0,
+    comments: []
