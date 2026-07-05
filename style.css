@@ -1232,3 +1232,28 @@ a {
 .card-tags {
   display: flex;
   align-items: center;
+  gap: 8px;
+}
+
+.notice-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.notice-badge.exam { background-color: var(--exam-bg); color: var(--exam-color); border: 1px solid var(--exam-border); }
+.notice-badge.event { background-color: var(--event-bg); color: var(--event-color); border: 1px solid var(--event-border); }
+.notice-badge.placement { background-color: var(--placement-bg); color: var(--placement-color); border: 1px solid var(--placement-border); }
+.notice-badge.general { background-color: var(--general-bg); color: var(--general-color); border: 1px solid var(--general-border); }
+
+.notice-pin-tag {
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;

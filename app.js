@@ -685,3 +685,17 @@ function deleteNotice(noticeId) {
   
   showToast("Notice deleted successfully", "success");
 }
+
+// 5. Open Detailed Notice Modal
+function openNoticeDetails(noticeId) {
+  const notice = state.notices.find(n => n.id === noticeId);
+  if (!notice) return;
+  
+  // Mark notice as read
+  if (!state.readNotices.includes(noticeId)) {
+    state.readNotices.push(noticeId);
+    saveStateToStorage();
+    renderNotifications();
+  }
+  
+  // Save active ID in modal data attribute
