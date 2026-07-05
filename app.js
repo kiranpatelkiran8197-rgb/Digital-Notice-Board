@@ -713,3 +713,18 @@ function openNoticeDetails(noticeId) {
   D.modalPostDate.textContent = new Date(notice.date).toLocaleString('en-US', {
     month: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'
   });
+  
+  // Title & Body
+  D.modalNoticeTitle.textContent = notice.title;
+  D.modalNoticeBody.innerHTML = renderMarkdown(notice.content);
+  
+  // Star button state
+  updateModalStarButton(state.starredNotices.includes(noticeId));
+  
+  // Show / Hide Delete Button based on role
+  if (state.currentRole === 'admin') {
+    D.modalDeleteBtn.style.display = 'flex';
+  } else {
+    D.modalDeleteBtn.style.display = 'none';
+  }
+  

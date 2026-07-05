@@ -1283,3 +1283,28 @@ a {
 }
 
 .author-info-text h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.post-time-stamp {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.card-actions-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-top-btn {
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+}
