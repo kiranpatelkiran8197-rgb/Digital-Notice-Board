@@ -589,3 +589,28 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  animation: slide-up-fade 0.7s ease-out;
+}
+
+.stat-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  padding: 6px 14px;
+  border-radius: var(--radius-round-pill, 100px);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: background var(--transition-fast);
+}
+
+.stat-tag:hover {
+  background-color: rgba(255,255,255,0.25);
+}
+
+.stat-tag.urgent {
+  background-color: rgba(244, 63, 94, 0.25);
+  border-color: rgba(244, 63, 94, 0.25);
+}

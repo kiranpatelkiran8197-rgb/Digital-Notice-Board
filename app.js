@@ -327,3 +327,17 @@ function renderTicker() {
     item.dataset.id = notice.id;
     item.innerHTML = `
       <span class="ticker-tag ${notice.category}">${notice.category}</span>
+      <span>${notice.title}</span>
+    `;
+    item.addEventListener('click', () => openNoticeDetails(notice.id));
+    D.tickerItems.appendChild(item);
+  });
+}
+
+// 2. Render Sidebar Count Badges & Stats
+function updateStatsAndBadges() {
+  const notices = state.notices;
+  const starred = state.starredNotices;
+  
+  // Sidebar Category counts
+  D.countAll.textContent = notices.length;
