@@ -126,3 +126,18 @@ let state = {
   readNotices: [],
   selectedFile: null      // For temporary attachment storage in form
 };
+
+// --- DOM References ---
+const D = {
+  roleStudent: document.getElementById('btn-student'),
+  roleAdmin: document.getElementById('btn-admin'),
+  userAvatarProfile: document.getElementById('user-avatar-profile'),
+  userAvatarInitials: document.getElementById('user-avatar-initials'),
+  heroTitleText: document.getElementById('hero-title-text'),
+  heroBanner: document.getElementById('hero-banner'),
+  adminCreateNoticeContainer: document.getElementById('admin-create-notice-container'),
+  
+  createNoticeCollapsed: document.getElementById('create-notice-collapsed'),
+  createNoticeForm: document.getElementById('create-notice-form'),
+  cancelCreateNotice: document.getElementById('cancel-create-notice'),
+  btnCancelNotice: document.getElementById('btn-cancel-notice'),

@@ -229,3 +229,29 @@ a {
   color: var(--text-primary);
   line-height: 1.1;
   letter-spacing: -0.02em;
+}
+
+.logo-subtitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Header Search */
+.search-area {
+  flex-grow: 1;
+  max-width: 480px;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  height: 42px;
+  gap: 10px;
+  transition: all var(--transition-fast);
+}
+
+.search-area:focus-within {
+  background-color: #fff;
+  border-color: var(--border-focus);
