@@ -486,3 +486,29 @@ a {
 .item-badge.event { background-color: var(--event-color); }
 .item-badge.placement { background-color: var(--placement-color); }
 .item-badge.general { background-color: var(--general-color); }
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.item-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.dropdown-empty {
+  text-align: center;
+  padding: 24px 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* User Avatar circle */

@@ -270,3 +270,17 @@ function showToast(message, type = 'info') {
   } else if (type === 'error') {
     icon.setAttribute('data-lucide', 'x-circle');
     D.toastNotification.style.borderLeft = "4px solid var(--exam-color)";
+  } else {
+    icon.setAttribute('data-lucide', 'info');
+    D.toastNotification.style.borderLeft = "4px solid var(--color-primary)";
+  }
+  
+  lucide.createIcons();
+  D.toastNotification.classList.add('active');
+  
+  setTimeout(() => {
+    D.toastNotification.classList.remove('active');
+  }, 4000);
+}
+
+// Local Storage Synchronizers
