@@ -441,3 +441,18 @@ function renderNoticesStream() {
   if (filtered.length === 0) {
     D.emptyFeedState.style.display = 'block';
     return;
+  }
+  
+  D.emptyFeedState.style.display = 'none';
+  
+  filtered.forEach(notice => {
+    const card = document.createElement('div');
+    
+    // Build card structure
+    const isStarred = state.starredNotices.includes(notice.id);
+    const isLiked = state.likedNotices.includes(notice.id);
+    const isPinned = notice.isPinned;
+    const isUrgent = notice.isUrgent;
+    
+    card.className = `notice-card ${isPinned ? 'pinned' : ''} ${isUrgent ? 'urgent-card' : ''}`;
+    card.dataset.id = notice.id;
