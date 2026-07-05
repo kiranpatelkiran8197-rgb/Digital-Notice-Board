@@ -599,3 +599,17 @@ function switchRole(role) {
     D.userAvatarInitials.textContent = "ST";
     D.userAvatarProfile.classList.remove('admin-mode');
     
+    // Update Hero elements
+    D.heroTitleText.textContent = "Welcome back, Student!";
+    D.heroBanner.classList.remove('admin-theme');
+    
+    // Hide creation block
+    D.adminCreateNoticeContainer.style.display = 'none';
+    
+    // Comment input initials update
+    D.commentInputAvatar.textContent = "ST";
+    D.commentInputAvatar.style.backgroundColor = "var(--color-primary-light)";
+    D.commentInputAvatar.style.borderColor = "var(--color-primary)";
+    
+    showToast("Switched to Student View", "info");
+  }
