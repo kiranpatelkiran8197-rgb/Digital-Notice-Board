@@ -814,3 +814,17 @@ function submitComment() {
     author: authorName,
     avatar: avatarInitials,
     content: text,
+    date: new Date().toISOString()
+  };
+  
+  notice.comments.push(newComment);
+  D.commentTextarea.value = ""; // Clear input
+  
+  saveStateToStorage();
+  renderCommentsList(notice.comments);
+  renderNoticesStream(); // Re-render card to update count badge
+}
+
+// 8. Attach mock file simulation from selection drawer
+function handleMockAttachmentSelection(filename, type) {
+  state.selectedFile = {
