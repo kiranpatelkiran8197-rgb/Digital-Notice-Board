@@ -1028,3 +1028,18 @@ function setupEventListeners() {
     const noticeId = D.modalBackdrop.dataset.id;
     if (noticeId) deleteNotice(noticeId);
   });
+  
+  // Simulation of mock PDF download
+  D.btnDownloadAttachment.addEventListener('click', () => {
+    showToast("Downloaded document attachment (Simulated)", "success");
+  });
+  
+  // Submit comment triggers
+  D.btnSubmitComment.addEventListener('click', submitComment);
+  D.commentTextarea.addEventListener('keydown', (e) => {
+    // Submit on Enter (without shift key)
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      submitComment();
+    }
+  });
