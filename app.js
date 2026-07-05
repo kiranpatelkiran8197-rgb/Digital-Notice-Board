@@ -828,3 +828,17 @@ function submitComment() {
 // 8. Attach mock file simulation from selection drawer
 function handleMockAttachmentSelection(filename, type) {
   state.selectedFile = {
+    name: filename,
+    type: type,
+    size: "1.5 MB" // Static mock size
+  };
+  
+  // Display attached name in form
+  D.attachedFileName.textContent = filename;
+  
+  // Style selection badge inside form display
+  const icon = D.attachedFileDisplay.querySelector('.file-icon');
+  icon.setAttribute('data-lucide', type === 'image' ? 'image' : 'file-text');
+  D.attachedFileDisplay.style.color = 'var(--text-primary)';
+  D.attachedFileDisplay.style.borderColor = 'var(--text-muted)';
+  
