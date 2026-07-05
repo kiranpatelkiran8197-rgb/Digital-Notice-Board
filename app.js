@@ -284,3 +284,17 @@ function showToast(message, type = 'info') {
 }
 
 // Local Storage Synchronizers
+function saveStateToStorage() {
+  localStorage.setItem('aether_notices', JSON.stringify(state.notices));
+  localStorage.setItem('aether_starred', JSON.stringify(state.starredNotices));
+  localStorage.setItem('aether_liked', JSON.stringify(state.likedNotices));
+  localStorage.setItem('aether_read', JSON.stringify(state.readNotices));
+  localStorage.setItem('aether_role', state.currentRole);
+}
+
+function loadStateFromStorage() {
+  const savedNotices = localStorage.getItem('aether_notices');
+  const savedStarred = localStorage.getItem('aether_starred');
+  const savedLiked = localStorage.getItem('aether_liked');
+  const savedRead = localStorage.getItem('aether_read');
+  const savedRole = localStorage.getItem('aether_role');
