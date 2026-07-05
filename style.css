@@ -743,3 +743,29 @@ a {
 .quick-link-item {
   display: flex;
   align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 6px 0;
+  transition: color var(--transition-fast);
+}
+
+.quick-link-item:hover {
+  color: var(--color-primary);
+}
+
+.quick-link-item i {
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+}
+
+/* Right Column: Notice Stream and Post box */
+.stream-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Collapsed Announce Box */

@@ -413,3 +413,17 @@ function renderNoticesStream() {
     filtered = filtered.filter(n => state.starredNotices.includes(n.id));
   }
   
+  // Filter by Search Query
+  if (state.searchQuery.trim() !== '') {
+    const q = state.searchQuery.toLowerCase();
+    filtered = filtered.filter(n => 
+      n.title.toLowerCase().includes(q) || 
+      n.content.toLowerCase().includes(q) || 
+      n.author.toLowerCase().includes(q) ||
+      (n.attachment && n.attachment.name.toLowerCase().includes(q))
+    );
+  }
+  
+  // Sorting
+  if (state.sortBy === 'recent') {
+    // Sort by date newest first
