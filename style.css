@@ -1592,3 +1592,28 @@ a {
   cursor: pointer;
   transition: all var(--transition-fast);
 }
+
+.modal-action-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.modal-action-btn.starred {
+  color: var(--starred-color);
+  background-color: var(--starred-bg);
+  border-color: var(--starred-color);
+}
+
+.modal-action-btn.starred i {
+  fill: var(--starred-color);
+}
+
+.modal-action-btn.delete:hover {
+  background-color: var(--exam-bg);
+  color: var(--exam-color);
+  border-color: var(--exam-color);
+}
+
+.modal-notice-title {
+  font-size: 1.45rem;
+  font-weight: 800;

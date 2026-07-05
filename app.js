@@ -885,3 +885,17 @@ function handleCreateNoticeSubmit(e) {
     attachment: state.selectedFile,
     likes: 0,
     comments: []
+  };
+  
+  // Prepend to notices list
+  state.notices.unshift(newNotice);
+  
+  // Clear and hide form
+  D.createNoticeForm.reset();
+  clearFormAttachment();
+  toggleCreateNoticeCollapse(true);
+  
+  // Sync state
+  saveStateToStorage();
+  updateStatsAndBadges();
+  renderTicker();
