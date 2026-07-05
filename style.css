@@ -435,3 +435,28 @@ a {
 
 .dropdown-header h3 {
   font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.dropdown-header button {
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.dropdown-header button:hover {
+  text-decoration: underline;
+}
+
+.dropdown-list {
+  max-height: 250px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdown-item {
+  display: flex;

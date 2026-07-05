@@ -241,3 +241,17 @@ function renderMarkdown(text) {
 function formatFriendlyDate(isoString) {
   const date = new Date(isoString);
   const now = new Date();
+  const diffTime = Math.abs(now - date);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  
+  // If posted today, show "X hours ago" or "Today"
+  if (date.toDateString() === now.toDateString()) {
+    const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+    if (diffHours < 1) {
+      const diffMins = Math.floor(diffTime / (1000 * 60));
+      return diffMins <= 1 ? "Just now" : `${diffMins}m ago`;
+    }
+    return `${diffHours}h ago`;
+  }
+  
+  // Options for full date formatting
