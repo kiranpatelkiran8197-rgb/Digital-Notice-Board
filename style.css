@@ -23,3 +23,29 @@
   --color-accent-light: #ccfbf1;
   --color-accent-hover: #0f766e;
   
+  --border-color: #e2e8f0;
+  --border-focus: #818cf8;
+
+  /* Category Specific Colors - Curated, soft HSL properties */
+  --exam-color: hsl(354, 70%, 54%);
+  --exam-bg: hsl(354, 100%, 98%);
+  --exam-border: hsl(354, 80%, 93%);
+
+  --event-color: hsl(38, 90%, 42%);
+  --event-bg: hsl(38, 100%, 97%);
+  --event-border: hsl(38, 80%, 92%);
+
+  --placement-color: hsl(162, 70%, 35%);
+  --placement-bg: hsl(162, 60%, 96%);
+  --placement-border: hsl(162, 50%, 90%);
+
+  --general-color: hsl(262, 60%, 52%);
+  --general-bg: hsl(262, 100%, 98%);
+  --general-border: hsl(262, 80%, 94%);
+
+  --starred-color: hsl(45, 90%, 48%);
+  --starred-bg: hsl(45, 100%, 96%);
+
+  /* Layout and Geometry */
+  --radius-sm: 8px;
+  --radius-md: 12px;

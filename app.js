@@ -12,3 +12,17 @@ const DEFAULT_NOTICES = [
     author: "Office of Academics",
     date: "2026-07-05T10:00:00.000Z",
     isPinned: true,
+    isUrgent: true,
+    attachment: {
+      name: "exam_timetable_v1.pdf",
+      type: "pdf",
+      size: "1.2 MB"
+    },
+    likes: 42,
+    comments: [
+      {
+        id: "c-1-1",
+        author: "Alex Rivers",
+        avatar: "AR",
+        content: "Are we allowed to bring scientific calculators for the Discrete Mathematics exam?",
+        date: "2026-07-05T11:15:00.000Z"
