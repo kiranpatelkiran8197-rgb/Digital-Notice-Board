@@ -899,3 +899,18 @@ function handleCreateNoticeSubmit(e) {
   saveStateToStorage();
   updateStatsAndBadges();
   renderTicker();
+  renderNotifications();
+  renderNoticesStream();
+  
+  showToast("Notice posted successfully to the stream!", "success");
+}
+
+function toggleCreateNoticeCollapse(shouldCollapse) {
+  if (shouldCollapse) {
+    D.createNoticeForm.style.display = 'none';
+    D.createNoticeCollapsed.style.display = 'flex';
+  } else {
+    D.createNoticeCollapsed.style.display = 'none';
+    D.createNoticeForm.style.display = 'block';
+    
+    // Set default author name based on role
