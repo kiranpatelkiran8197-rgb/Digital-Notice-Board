@@ -1308,3 +1308,29 @@ a {
   display: flex;
   align-items: center;
 }
+
+.card-top-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.card-top-btn.starred {
+  color: var(--starred-color);
+}
+
+.card-top-btn.delete:hover {
+  color: var(--exam-color);
+}
+
+.card-top-btn i {
+  width: 16px;
+  height: 16px;
+}
+
+/* Card text body */
+.card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;

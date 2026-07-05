@@ -728,3 +728,17 @@ function openNoticeDetails(noticeId) {
     D.modalDeleteBtn.style.display = 'none';
   }
   
+  // File attachment rendering
+  if (notice.attachment) {
+    D.modalFileName.textContent = notice.attachment.name;
+    D.modalFileSize.textContent = notice.attachment.size;
+    D.modalFileIcon.className = `file-icon-doc ${notice.attachment.type}`;
+    
+    // Recreate Lucide structure on modal icon
+    D.modalFileIcon.setAttribute('data-lucide', notice.attachment.type === 'image' ? 'image' : 'file-text');
+    D.modalAttachmentsContainer.style.display = 'block';
+  } else {
+    D.modalAttachmentsContainer.style.display = 'none';
+  }
+  
+  // Comments List rendering
