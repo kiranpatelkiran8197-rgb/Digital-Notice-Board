@@ -641,3 +641,18 @@ function toggleStarNotice(noticeId) {
     }
   }
 }
+
+// 3. Like notice toggle
+function toggleLikeNotice(noticeId) {
+  const notice = state.notices.find(n => n.id === noticeId);
+  if (!notice) return;
+  
+  const likedIndex = state.likedNotices.indexOf(noticeId);
+  if (likedIndex === -1) {
+    state.likedNotices.push(noticeId);
+    notice.likes += 1;
+  } else {
+    state.likedNotices.splice(likedIndex, 1);
+    notice.likes -= 1;
+  }
+  

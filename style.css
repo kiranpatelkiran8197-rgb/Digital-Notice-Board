@@ -1154,3 +1154,29 @@ a {
   background-color: #fff;
   color: var(--color-primary);
   box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* Active Search banner info */
+.search-status-banner {
+  background-color: var(--color-primary-light);
+  border-left: 4px solid var(--color-primary);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-status-banner p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.search-status-banner p span {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.search-status-banner button {
