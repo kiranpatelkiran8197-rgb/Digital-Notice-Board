@@ -169,3 +169,18 @@ const D = {
   noticesStreamList: document.getElementById('notices-stream-list'),
   categoryBtns: document.querySelectorAll('.cat-filter-btn'),
   
+  // Stats Counters
+  statTotalCount: document.getElementById('stat-total-count'),
+  statUrgentCount: document.getElementById('stat-urgent-count'),
+  statStarredCount: document.getElementById('stat-starred-count'),
+  
+  // Sidebar count badges
+  countAll: document.getElementById('count-all'),
+  countExam: document.getElementById('count-exam'),
+  countEvent: document.getElementById('count-event'),
+  countPlacement: document.getElementById('count-placement'),
+  countGeneral: document.getElementById('count-general'),
+  countStarred: document.getElementById('count-starred'),
+  
+  // Ticker
+  tickerItems: document.getElementById('ticker-items'),
