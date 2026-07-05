@@ -771,3 +771,17 @@ function renderCommentsList(comments) {
   
   if (comments.length === 0) {
     D.modalCommentsList.innerHTML = `<div class="dropdown-empty" style="padding: 12px 0;">No class comments. Be the first to start the discussion!</div>`;
+    return;
+  }
+  
+  comments.forEach(comment => {
+    const node = document.createElement('div');
+    node.className = 'comment-node';
+    node.innerHTML = `
+      <div class="user-avatar-circle mini ${comment.author.includes('Admin') ? 'admin-mode' : ''}">
+        <span>${comment.avatar}</span>
+      </div>
+      <div class="comment-info-box">
+        <div class="comment-info-header">
+          <span class="commenter-name">${comment.author}</span>
+          <span class="comment-time">${formatFriendlyDate(comment.date)}</span>
