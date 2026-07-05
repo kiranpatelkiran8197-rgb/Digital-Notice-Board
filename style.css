@@ -1823,3 +1823,29 @@ a {
   border-radius: var(--radius-round);
   display: flex;
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.comment-send-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.comment-send-btn i {
+  width: 14px;
+  height: 14px;
+}
+
+/* 7. Toast Alerts styling */
+.toast-notification {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: #0f172a;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 100px;
+  box-shadow: var(--shadow-xl);

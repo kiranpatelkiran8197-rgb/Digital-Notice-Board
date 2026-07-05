@@ -1014,3 +1014,17 @@ function setupEventListeners() {
   // 6. Modal Close Trigger
   D.closeNoticeModal.addEventListener('click', closeDetailsModal);
   D.modalBackdrop.addEventListener('click', (e) => {
+    if (e.target === D.modalBackdrop) closeDetailsModal();
+  });
+  
+  // Bookmark star from modal details
+  D.modalStarBtn.addEventListener('click', () => {
+    const noticeId = D.modalBackdrop.dataset.id;
+    if (noticeId) toggleStarNotice(noticeId);
+  });
+  
+  // Delete from modal details
+  D.modalDeleteBtn.addEventListener('click', () => {
+    const noticeId = D.modalBackdrop.dataset.id;
+    if (noticeId) deleteNotice(noticeId);
+  });
