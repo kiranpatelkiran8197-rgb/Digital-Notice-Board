@@ -1103,3 +1103,28 @@ a {
   background-color: var(--bg-hover);
   color: var(--text-secondary);
 }
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Feed Headers */
+.feed-header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.feed-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.sort-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

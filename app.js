@@ -613,3 +613,17 @@ function switchRole(role) {
     
     showToast("Switched to Student View", "info");
   }
+  
+  saveStateToStorage();
+  renderNoticesStream(); // Re-render feed to apply/remove delete buttons
+}
+
+// 2. Star/Bookmark notice card toggle
+function toggleStarNotice(noticeId) {
+  const index = state.starredNotices.indexOf(noticeId);
+  if (index === -1) {
+    state.starredNotices.push(noticeId);
+    showToast("Announcement pinned in your bookmarks", "success");
+  } else {
+    state.starredNotices.splice(index, 1);
+    showToast("Announcement removed from bookmarks", "info");
