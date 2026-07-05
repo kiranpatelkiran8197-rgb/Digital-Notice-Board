@@ -666,3 +666,29 @@ a {
 
 .category-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-list li.separator {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 10px 0;
+}
+
+.cat-filter-btn {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}

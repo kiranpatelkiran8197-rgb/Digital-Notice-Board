@@ -370,3 +370,17 @@ function renderNotifications() {
   D.notificationList.innerHTML = "";
   if (notices.length === 0) {
     D.notificationList.innerHTML = `<div class="dropdown-empty">No updates available</div>`;
+    return;
+  }
+  
+  // Limit to most recent 5
+  notices.slice(0, 5).forEach(notice => {
+    const isUnread = !state.readNotices.includes(notice.id);
+    const item = document.createElement('div');
+    item.className = `dropdown-item ${isUnread ? 'unread' : ''}`;
+    item.innerHTML = `
+      <div class="item-badge ${notice.category}"></div>
+      <div class="item-info">
+        <span class="item-title">${notice.title}</span>
+        <span class="item-time">${formatFriendlyDate(notice.date)}</span>
+      </div>
