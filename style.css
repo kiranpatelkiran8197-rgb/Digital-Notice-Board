@@ -1540,3 +1540,29 @@ a {
   flex-direction: column;
   gap: 16px;
 }
+
+.modal-notice-metadata {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar-big {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-primary-light);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: var(--radius-round);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.metadata-text {
+  flex-grow: 1;
+}
+
+.metadata-text h4 {
+  font-size: 0.9rem;

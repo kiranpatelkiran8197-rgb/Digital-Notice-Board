@@ -855,3 +855,19 @@ function clearFormAttachment() {
   D.attachedFileDisplay.removeAttribute('style');
   lucide.createIcons();
 }
+
+// 9. Process form announcement submission
+function handleCreateNoticeSubmit(e) {
+  e.preventDefault();
+  
+  const title = D.formNoticeTitle.value.trim();
+  const category = D.formNoticeCategory.value;
+  const authorName = D.formNoticeAuthor.value.trim() || "Office of Academics";
+  const content = D.formNoticeContent.value.trim();
+  const isPinned = D.formNoticeIsPinned.checked;
+  const isUrgent = D.formNoticeIsUrgent.checked;
+  
+  if (!title || !category || !content) {
+    showToast("Please fill in all required fields", "error");
+    return;
+  }
