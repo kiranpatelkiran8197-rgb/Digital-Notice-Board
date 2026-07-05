@@ -1360,3 +1360,29 @@ a {
 
 .card-attachment-clip i {
   width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.card-attachment-clip.pdf i { color: var(--exam-color); }
+.card-attachment-clip.word i { color: var(--color-primary); }
+.card-attachment-clip.excel i { color: var(--placement-color); }
+.card-attachment-clip.image i { color: var(--event-color); }
+
+.card-attachment-clip span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Card footer stats count */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;

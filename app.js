@@ -756,3 +756,18 @@ function updateModalStarButton(starred) {
   } else {
     D.modalStarBtn.classList.remove('starred');
     D.modalStarBtn.title = "Bookmark notice";
+  }
+}
+
+function closeDetailsModal() {
+  D.modalBackdrop.style.display = 'none';
+  D.commentTextarea.value = ""; // Clear comment text box
+}
+
+// 6. Render comments list inside modal
+function renderCommentsList(comments) {
+  D.modalCommentsCount.textContent = `${comments.length} Class Comment${comments.length !== 1 ? 's' : ''}`;
+  D.modalCommentsList.innerHTML = "";
+  
+  if (comments.length === 0) {
+    D.modalCommentsList.innerHTML = `<div class="dropdown-empty" style="padding: 12px 0;">No class comments. Be the first to start the discussion!</div>`;
