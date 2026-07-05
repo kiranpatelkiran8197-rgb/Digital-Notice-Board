@@ -155,3 +155,17 @@ const D = {
   attachedFileName: document.getElementById('attached-file-name'),
   
   // Search & Sorting
+  searchInput: document.getElementById('search-input'),
+  clearSearch: document.getElementById('clear-search'),
+  searchStatusBanner: document.getElementById('search-status-banner'),
+  searchQueryText: document.getElementById('search-query-text'),
+  resetSearchBannerBtn: document.getElementById('reset-search-banner-btn'),
+  sortRecent: document.getElementById('sort-recent'),
+  sortPinned: document.getElementById('sort-pinned'),
+  
+  // Feed Layout
+  currentFilterTitle: document.getElementById('current-filter-title'),
+  emptyFeedState: document.getElementById('empty-feed-state'),
+  noticesStreamList: document.getElementById('notices-stream-list'),
+  categoryBtns: document.querySelectorAll('.cat-filter-btn'),
+  
