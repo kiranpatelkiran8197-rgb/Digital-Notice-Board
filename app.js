@@ -341,3 +341,17 @@ function updateStatsAndBadges() {
   
   // Sidebar Category counts
   D.countAll.textContent = notices.length;
+  D.countExam.textContent = notices.filter(n => n.category === 'exam').length;
+  D.countEvent.textContent = notices.filter(n => n.category === 'event').length;
+  D.countPlacement.textContent = notices.filter(n => n.category === 'placement').length;
+  D.countGeneral.textContent = notices.filter(n => n.category === 'general').length;
+  D.countStarred.textContent = starred.length;
+  
+  // Hero stats block
+  D.statTotalCount.textContent = `${notices.length} Notices`;
+  D.statUrgentCount.textContent = `${notices.filter(n => n.isUrgent).length} Urgent`;
+  D.statStarredCount.textContent = `${starred.length} Starred`;
+}
+
+// 3. Render Notification Bell & Dropdown
+function renderNotifications() {

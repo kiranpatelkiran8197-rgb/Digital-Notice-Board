@@ -614,3 +614,28 @@ a {
   background-color: rgba(244, 63, 94, 0.25);
   border-color: rgba(244, 63, 94, 0.25);
 }
+
+.stat-tag.starred {
+  background-color: rgba(234, 179, 8, 0.2);
+  border-color: rgba(234, 179, 8, 0.2);
+}
+
+.hero-visual-pattern {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  border-radius: var(--radius-round);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 5. Content Grid Layout */
+.content-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  align-items: start;
+}
