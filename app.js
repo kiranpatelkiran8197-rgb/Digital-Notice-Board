@@ -570,3 +570,17 @@ function switchRole(role) {
   state.currentRole = role;
   
   // Toggle Active styling on toggle group
+  if (role === 'admin') {
+    D.roleAdmin.classList.add('active');
+    D.roleStudent.classList.remove('active');
+    
+    // Update profile icon details
+    D.userAvatarInitials.textContent = "AD";
+    D.userAvatarProfile.classList.add('admin-mode');
+    
+    // Update Hero elements
+    D.heroTitleText.textContent = "Aether Faculty Hub (Admin)";
+    D.heroBanner.classList.add('admin-theme');
+    
+    // Show creation block
+    D.adminCreateNoticeContainer.style.display = 'block';
