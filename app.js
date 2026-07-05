@@ -627,3 +627,17 @@ function toggleStarNotice(noticeId) {
   } else {
     state.starredNotices.splice(index, 1);
     showToast("Announcement removed from bookmarks", "info");
+  }
+  
+  saveStateToStorage();
+  updateStatsAndBadges();
+  renderNoticesStream();
+  
+  // Sync details modal Star icon if open
+  if (D.modalBackdrop.style.display === 'flex') {
+    const modalNoticeId = D.modalBackdrop.dataset.id;
+    if (modalNoticeId === noticeId) {
+      updateModalStarButton(state.starredNotices.includes(noticeId));
+    }
+  }
+}
