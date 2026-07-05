@@ -846,3 +846,29 @@ a {
 }
 
 .form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.form-group label .required {
+  color: var(--exam-color);
+}
+
+.form-group input[type="text"], 
+.form-group select, 
+.form-group textarea {

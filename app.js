@@ -470,3 +470,17 @@ function renderNoticesStream() {
     
     // Author Initials for Avatar
     const initials = notice.author.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+    
+    // Hide delete button from Student Role
+    const deleteBtnHtml = state.currentRole === 'admin' 
+      ? `<button class="card-top-btn delete" title="Delete notice" data-action="delete">
+          <i data-lucide="trash-2"></i>
+         </button>` 
+      : "";
+      
+    card.innerHTML = `
+      <!-- Tags header row -->
+      <div class="card-author-row">
+        <div class="author-details">
+          <div class="user-avatar-circle mini ${notice.category === 'exam' ? 'admin-mode' : ''}">
+            <span>${initials}</span>
