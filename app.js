@@ -198,3 +198,17 @@ const D = {
   modalNoticeBody: document.getElementById('modal-notice-body'),
   modalAttachmentsContainer: document.getElementById('modal-attachments-container'),
   modalFileName: document.getElementById('modal-file-name'),
+  modalFileSize: document.getElementById('modal-file-size'),
+  modalFileIcon: document.getElementById('modal-file-icon'),
+  btnDownloadAttachment: document.getElementById('btn-download-attachment'),
+  
+  // Comments
+  modalCommentsCount: document.getElementById('modal-comments-count'),
+  modalCommentsList: document.getElementById('modal-comments-list'),
+  commentInputAvatar: document.getElementById('comment-input-avatar'),
+  commentTextarea: document.getElementById('comment-textarea'),
+  btnSubmitComment: document.getElementById('btn-submit-comment'),
+  
+  // Bell Notifications
+  notificationBell: document.getElementById('notification-bell'),
+  bellBadgeCount: document.getElementById('bell-badge-count'),

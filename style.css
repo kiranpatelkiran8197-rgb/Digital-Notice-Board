@@ -357,3 +357,29 @@ a {
 }
 
 /* Admin style badge adaptation */
+.role-btn[data-role="admin"].active {
+  background-color: var(--color-accent);
+}
+
+/* Notification Bell Dropdown */
+.header-notification-bell {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all var(--transition-fast);
+}
+
+.header-notification-bell:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--text-muted);
+}
+
+.bell-icon {
+  width: 18px;
