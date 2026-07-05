@@ -513,3 +513,17 @@ function renderNoticesStream() {
         <h3>${notice.title}</h3>
         <p>${notice.content}</p>
       </div>
+
+      <!-- Attached files block -->
+      ${attachmentHtml}
+
+      <!-- Interactive stats footer -->
+      <div class="card-footer">
+        <div class="card-stats-group">
+          <div class="stat-item ${isLiked ? 'active' : ''}" data-action="like">
+            <i data-lucide="thumbs-up"></i>
+            <span>${notice.likes} Likes</span>
+          </div>
+          <div class="stat-item" data-action="open">
+            <i data-lucide="message-square"></i>
+            <span>${notice.comments.length} Class Comments</span>
