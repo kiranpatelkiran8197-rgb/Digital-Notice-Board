@@ -1746,3 +1746,28 @@ a {
 }
 
 .comment-info-box {
+  flex-grow: 1;
+}
+
+.comment-info-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.commenter-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.comment-time {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.comment-body-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}

@@ -971,3 +971,17 @@ function setupEventListeners() {
       D.searchStatusBanner.style.display = 'flex';
       D.searchQueryText.textContent = val;
     } else {
+      D.clearSearch.style.display = 'none';
+      D.searchStatusBanner.style.display = 'none';
+    }
+    
+    renderNoticesStream();
+  });
+  
+  // Clear search cross icon action
+  D.clearSearch.addEventListener('click', () => {
+    D.searchInput.value = "";
+    state.searchQuery = "";
+    D.clearSearch.style.display = 'none';
+    D.searchStatusBanner.style.display = 'none';
+    renderNoticesStream();
