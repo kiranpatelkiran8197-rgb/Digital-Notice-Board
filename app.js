@@ -112,3 +112,17 @@ const DEFAULT_NOTICES = [
       }
     ]
   }
+];
+
+// --- App State ---
+let state = {
+  currentRole: 'student', // 'student' or 'admin'
+  activeCategory: 'all',  // 'all', 'exam', 'event', 'placement', 'general', 'starred'
+  searchQuery: '',
+  sortBy: 'recent',       // 'recent' or 'pinned'
+  notices: [],
+  starredNotices: [],
+  likedNotices: [],
+  readNotices: [],
+  selectedFile: null      // For temporary attachment storage in form
+};
