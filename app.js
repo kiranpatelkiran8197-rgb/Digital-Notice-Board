@@ -355,3 +355,18 @@ function updateStatsAndBadges() {
 
 // 3. Render Notification Bell & Dropdown
 function renderNotifications() {
+  const notices = [...state.notices].sort((a,b) => new Date(b.date) - new Date(a.date));
+  const unreadCount = notices.filter(n => !state.readNotices.includes(n.id)).length;
+  
+  // Bell Badge Count
+  if (unreadCount > 0) {
+    D.bellBadgeCount.textContent = unreadCount;
+    D.bellBadgeCount.style.display = 'flex';
+  } else {
+    D.bellBadgeCount.style.display = 'none';
+  }
+  
+  // Dropdown list
+  D.notificationList.innerHTML = "";
+  if (notices.length === 0) {
+    D.notificationList.innerHTML = `<div class="dropdown-empty">No updates available</div>`;
