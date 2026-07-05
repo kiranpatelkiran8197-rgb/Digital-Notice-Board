@@ -1694,3 +1694,29 @@ a {
   color: #fff;
   border-color: var(--color-primary);
 }
+
+.modal-separator {
+  height: 1px;
+  background-color: var(--border-color);
+  border: none;
+}
+
+/* Comments thread container */
+.modal-comments-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comments-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.comments-header i {
+  width: 18px;
+  height: 18px;

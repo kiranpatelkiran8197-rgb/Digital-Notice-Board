@@ -942,3 +942,18 @@ function setupEventListeners() {
   // Close dropdown on click outside
   document.addEventListener('click', () => {
     D.notificationDropdown.classList.remove('active');
+  });
+  
+  // 3. Category Filter Action click
+  D.categoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      D.categoryBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const category = btn.dataset.category;
+      state.activeCategory = category;
+      
+      // Update Stream Header Title
+      const textSpan = btn.querySelector('span');
+      D.currentFilterTitle.textContent = textSpan ? textSpan.textContent : "All Notices";
+      
