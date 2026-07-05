@@ -427,3 +427,17 @@ function renderNoticesStream() {
   // Sorting
   if (state.sortBy === 'recent') {
     // Sort by date newest first
+    filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+  } else if (state.sortBy === 'pinned') {
+    // Pinned notices first, then newest
+    filtered.sort((a, b) => {
+      if (a.isPinned && !b.isPinned) return -1;
+      if (!a.isPinned && b.isPinned) return 1;
+      return new Date(b.date) - new Date(a.date);
+    });
+  }
+  
+  // Render feed states
+  if (filtered.length === 0) {
+    D.emptyFeedState.style.display = 'block';
+    return;
